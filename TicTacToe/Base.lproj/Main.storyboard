@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,181 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KsT-jQ-ysq">
+                                <rect key="frame" x="62.5" y="208.5" width="250" height="250"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ai0-HA-ECA" customClass="GridLabel" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="Sam-3t-P65"/>
+                                            <constraint firstAttribute="width" constant="75" id="W2d-wL-PoB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="60"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwF-g4-RJz" customClass="GridLabel" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="87" y="-1" width="75" height="75"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="FVq-MP-bec"/>
+                                            <constraint firstAttribute="height" constant="75" id="YmN-E3-bCC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="60"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZM-vh-zxB" customClass="GridLabel" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="-1" y="87" width="75" height="75"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="8p0-tt-ilT"/>
+                                            <constraint firstAttribute="height" constant="75" id="p5H-me-qC7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="60"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ty-Mn-RuR" customClass="GridLabel" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="88" y="88" width="75" height="75"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="j0j-xM-8jG"/>
+                                            <constraint firstAttribute="height" constant="75" id="nKP-KG-kBe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="60"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIS-tv-EsE" customClass="GridLabel" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="175" y="87" width="75" height="75"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="aMh-ef-9zL"/>
+                                            <constraint firstAttribute="width" constant="75" id="qHS-za-bcZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="60"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Frv-er-Qmr" customClass="GridLabel" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="-1" y="175" width="75" height="75"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="XMC-UO-n5A"/>
+                                            <constraint firstAttribute="height" constant="75" id="oj8-Pg-IhD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="60"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYv-AV-jMe" customClass="GridLabel" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="87" y="175" width="75" height="75"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="J8S-Uy-sgU"/>
+                                            <constraint firstAttribute="height" constant="75" id="oWP-vw-aXJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="60"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7D-uc-dXL" customClass="GridLabel" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="175" y="175" width="75" height="75"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="Q10-nK-NHK"/>
+                                            <constraint firstAttribute="width" constant="75" id="YmV-4S-pYl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="60"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ih0-gD-IfO" customClass="GridLabel" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="175" y="-1" width="75" height="75"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="QR2-jz-SUN"/>
+                                            <constraint firstAttribute="height" constant="75" id="fEp-iQ-LxY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="60"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.60858565409999998" green="0.056519327430000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="1Z6-qg-tQS"/>
+                                    <constraint firstItem="0Ty-Mn-RuR" firstAttribute="leading" secondItem="YZM-vh-zxB" secondAttribute="trailing" constant="14" id="5B3-uX-ebx"/>
+                                    <constraint firstItem="YZM-vh-zxB" firstAttribute="leading" secondItem="KsT-jQ-ysq" secondAttribute="leading" constant="-1" id="6lI-uI-wj6"/>
+                                    <constraint firstItem="ai0-HA-ECA" firstAttribute="leading" secondItem="KsT-jQ-ysq" secondAttribute="leading" id="BR1-E2-54N"/>
+                                    <constraint firstItem="bwF-g4-RJz" firstAttribute="leading" secondItem="yYv-AV-jMe" secondAttribute="leading" id="Cdl-xS-gLW"/>
+                                    <constraint firstAttribute="height" constant="250" id="G3r-qN-MYD"/>
+                                    <constraint firstItem="d7D-uc-dXL" firstAttribute="top" secondItem="kIS-tv-EsE" secondAttribute="bottom" constant="13" id="Ht6-gi-3eN"/>
+                                    <constraint firstItem="Ih0-gD-IfO" firstAttribute="top" secondItem="bwF-g4-RJz" secondAttribute="top" id="JxT-0M-82a"/>
+                                    <constraint firstItem="bwF-g4-RJz" firstAttribute="top" secondItem="KsT-jQ-ysq" secondAttribute="top" constant="-1" id="Mgj-zO-eWV"/>
+                                    <constraint firstItem="YZM-vh-zxB" firstAttribute="top" secondItem="ai0-HA-ECA" secondAttribute="bottom" constant="12" id="ODP-Ac-eds"/>
+                                    <constraint firstItem="YZM-vh-zxB" firstAttribute="leading" secondItem="Frv-er-Qmr" secondAttribute="leading" id="SLz-eR-7rg"/>
+                                    <constraint firstItem="Ih0-gD-IfO" firstAttribute="leading" secondItem="kIS-tv-EsE" secondAttribute="leading" id="ZZa-zo-gn4"/>
+                                    <constraint firstItem="0Ty-Mn-RuR" firstAttribute="top" secondItem="bwF-g4-RJz" secondAttribute="bottom" constant="14" id="bWt-be-x8v"/>
+                                    <constraint firstItem="ai0-HA-ECA" firstAttribute="top" secondItem="KsT-jQ-ysq" secondAttribute="top" id="eGr-pL-G5R"/>
+                                    <constraint firstItem="Frv-er-Qmr" firstAttribute="top" secondItem="YZM-vh-zxB" secondAttribute="bottom" constant="13" id="ffU-UV-7qg"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ih0-gD-IfO" secondAttribute="trailing" id="iNQ-BK-Nhs"/>
+                                    <constraint firstItem="kIS-tv-EsE" firstAttribute="leading" secondItem="d7D-uc-dXL" secondAttribute="leading" id="mlg-1i-hV0"/>
+                                    <constraint firstItem="bwF-g4-RJz" firstAttribute="leading" secondItem="ai0-HA-ECA" secondAttribute="trailing" constant="12" id="u4z-tB-hTK"/>
+                                    <constraint firstItem="YZM-vh-zxB" firstAttribute="baseline" secondItem="kIS-tv-EsE" secondAttribute="baseline" id="vcm-iG-Obh"/>
+                                    <constraint firstItem="yYv-AV-jMe" firstAttribute="baseline" secondItem="Frv-er-Qmr" secondAttribute="baseline" id="zet-5Q-qKy"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="7ky-sD-6Ky" appends="YES" id="QEe-qU-A2i"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tic Tac Toe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2H-gj-ZaE">
+                                <rect key="frame" x="53" y="107" width="268" height="52"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="41"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.60858565409999998" green="0.056519327430000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KsT-jQ-ysq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1c3-zC-kCN"/>
+                            <constraint firstItem="d2H-gj-ZaE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="53" id="8tR-qt-n7m"/>
+                            <constraint firstItem="KsT-jQ-ysq" firstAttribute="top" secondItem="d2H-gj-ZaE" secondAttribute="bottom" constant="50" id="IUG-Hy-9hp"/>
+                            <constraint firstItem="d2H-gj-ZaE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="87" id="QNU-6K-tbS"/>
+                            <constraint firstItem="d2H-gj-ZaE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V7n-H7-sZu"/>
+                            <constraint firstItem="KsT-jQ-ysq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sQh-Dl-TsF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="KsT-jQ-ysq" id="h6M-wH-TP8"/>
+                        <outlet property="girdLabel5" destination="kIS-tv-EsE" id="M39-dj-bIK"/>
+                        <outlet property="gridLabel0" destination="ai0-HA-ECA" id="kEk-v4-cR5"/>
+                        <outlet property="gridLabel1" destination="bwF-g4-RJz" id="re0-BR-G9r"/>
+                        <outlet property="gridLabel2" destination="Ih0-gD-IfO" id="Zwk-3m-zeu"/>
+                        <outlet property="gridLabel3" destination="YZM-vh-zxB" id="Ll5-jQ-lq8"/>
+                        <outlet property="gridLabel4" destination="0Ty-Mn-RuR" id="jZJ-tu-dSP"/>
+                        <outlet property="gridLabel6" destination="Frv-er-Qmr" id="4h5-CH-XDz"/>
+                        <outlet property="gridLabel7" destination="yYv-AV-jMe" id="sBP-HK-Udo"/>
+                        <outlet property="gridLabel8" destination="d7D-uc-dXL" id="C6o-HL-pXa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="7ky-sD-6Ky">
+                    <connections>
+                        <action selector="onTappedGripLabel:" destination="BYZ-38-t0r" id="BvK-oo-jEi"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="125.4872563718141"/>
         </scene>
     </scenes>
 </document>
